@@ -1,0 +1,536 @@
+/* "Tamming" Box Model With Reset */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Universal Styles */
+:root {
+  --background: rgba(47, 79, 79, 0.85);
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.25;
+}
+
+h1,
+h2 {
+  font-weight: bold;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 4rem;
+}
+
+.logos {
+  height: 2.2rem;
+  padding-top: 1.3rem;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: tranform 400ms ease-in-out;
+}
+
+
+
+.nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span:before,
+.nav-toggle-label span:after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span:before,
+.nav-toggle-label span:after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span:before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span:after {
+  top: 7px;
+}
+
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 150ms ease-in-out;
+}
+
+.mainbanner {
+  background-image: url('../images/rose.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 17.5rem;
+}
+
+
+.bane {
+  padding-left: 0;
+  padding-top: 2rem;
+  height: 8.7rem;
+}
+
+.banner h4 {
+  font-family: roboto;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: Maroon;
+}
+
+.content {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.content a {
+  text-decoration: none;
+}
+
+.content h2 {
+  font-size: 1.5rem;
+  color: black;
+  font-family: sans-serif;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.teaser {
+  font-size: 0.84rem;
+  letter-spacing: 0.01rem;
+  font-family: "Playfair Display";
+  padding-left: 0.1rem;
+}
+
+.headings h2 {
+  padding-top: 0.2rem;
+  padding-left: 0.1rem;
+}
+
+.date {
+  font-family: italics;
+  padding-left: 2rem;
+  padding-bottom: 0.2rem;
+}
+
+.articleimg {
+  max-height: 7rem;
+  max-width: 8rem;
+}
+
+.article {
+  background-color: Moccasin;
+  margin-top: 0.3rem;
+}
+
+.article span {
+  align-self: center;
+}
+
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  background-color: LightGrey;
+  height: 5rem;
+}
+
+footer a {
+  color: black;
+  font-size: 1.4rem;
+}
+
+footer h3 {
+  padding-top: 1.4rem;
+  font-size: 0.6rem;
+}
+
+.social {
+  padding-top: 2rem;
+}
+
+.ethreal {
+  height: 3rem;
+  padding-top: 1.5rem;
+}
+
+.artpiece {
+  margin: 2rem;
+}
+
+.bord {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Droid serif";
+  border-top: 0.5px solid black;
+  border-bottom: 0.5px solid black;
+  font-size: 0.6rem;
+}
+
+.bord .dpen,
+ .bord h3 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.scrip {
+  font-family: "Droid serif";
+  font-size: 0.8rem;
+}
+
+.linkage {
+  display: flex;
+  flex-shrink: 1rem;
+  background-color: black;
+  background-image: url("../../resources/images/rose.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* "Tamming" Box  */
+.main-banner {
+  background: url("../../resources/images/gas.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 25rem;
+}
+
+.consultimg {
+  background-image: url("../../resources/images/Azania.png");
+}
+
+.bg {
+  opacity: 0.5;
+}
+
+.consultpage {
+  margin-top: 7rem;
+}
+
+.consultpage p {
+  font-size: 0.9rem;
+}
+
+ .oneimg {
+  background-image: url("../../resources/images/business.jpg");
+}
+
+.twoimg {
+  background-image: url("../../resources/images/soweto8.jpg");
+}
+
+.headline {
+  position: relative;
+  top: 9rem;
+  width: 20rem;
+  padding: 2rem 3rem;
+  background-color: black;
+  color: white;
+}
+
+.headline h1 {
+  font-family: "Playfair Display";
+  margin: 0.25rem 0;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.contactback {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  flex-wrap: wrap;
+  background-image: url("../../resources/images/rose.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: table;
+  font-family: Quicksand;
+  width: 100%;
+  height: 38rem;
+  overflow: hidden;
+}
+
+.bane-two {
+  height: 15rem;
+  padding-top: 7rem;
+  padding-left: 20rem;
+}
+
+.form {
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  transform: translate(-50%. -50%);
+}
+
+.form h1 {
+  font-family: "Garamond";
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.form p {
+  font-family: "Garamond";
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.fill-in {
+  position: absolute;
+  flex-shrink: 2;
+}
+
+.white {
+  color: white;
+}
+
+.fill-in form input {
+  width: 100%;
+  margin: 1.2rem 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid #0078ff;
+}
+
+::-webkit-input-placeholder {
+  color: #EAEAEA;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+#msg {
+  margin-top: 3rem;
+}
+
+button {
+  padding: 1.2rem 2rem;
+  font-size: 0.9rem;
+  background: #0078ff;
+  border: none;
+  border-radius: 0.4rem;
+  margin-top: 1.3rem;
+  color: #fff;
+}
+
+.rrssb-buttons{box-sizing:border-box;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;font-size:12px;height:36px;margin:0;padding:0;width:100%}.rrssb-buttons:after{clear:both}.rrssb-buttons:after,.rrssb-buttons:before{content:' ';display:table}.rrssb-buttons li{box-sizing:border-box;float:left;height:100%;line-height:13px;list-style:none;margin:0;padding:0 2px}.rrssb-buttons li.rrssb-email a{background-color:#0a88ff}.rrssb-buttons li.rrssb-email a:hover{background-color:#006ed6}.rrssb-buttons li.rrssb-facebook a{background-color:#306199}.rrssb-buttons li.rrssb-facebook a:hover{background-color:#244872}.rrssb-buttons li.rrssb-tumblr a{background-color:#32506d}.rrssb-buttons li.rrssb-tumblr a:hover{background-color:#22364a}.rrssb-buttons li.rrssb-linkedin a{background-color:#007bb6}.rrssb-buttons li.rrssb-linkedin a:hover{background-color:#005983}.rrssb-buttons li.rrssb-twitter a{background-color:#26c4f1}.rrssb-buttons li.rrssb-twitter a:hover{background-color:#0eaad6}.rrssb-buttons li.rrssb-googleplus a{background-color:#e93f2e}.rrssb-buttons li.rrssb-googleplus a:hover{background-color:#ce2616}.rrssb-buttons li.rrssb-youtube a{background-color:#df1c31}.rrssb-buttons li.rrssb-youtube a:hover{background-color:#b21627}.rrssb-buttons li.rrssb-reddit a{background-color:#8bbbe3}.rrssb-buttons li.rrssb-reddit a:hover{background-color:#62a3d9}.rrssb-buttons li.rrssb-pinterest a{background-color:#b81621}.rrssb-buttons li.rrssb-pinterest a:hover{background-color:#8a1119}.rrssb-buttons li.rrssb-pocket a{background-color:#ed4054}.rrssb-buttons li.rrssb-pocket a:hover{background-color:#e4162d}.rrssb-buttons li.rrssb-github a{background-color:#444}.rrssb-buttons li.rrssb-github a:hover{background-color:#2b2b2b}.rrssb-buttons li.rrssb-instagram a{background-color:#125688}.rrssb-buttons li.rrssb-instagram a:hover{background-color:#0c3a5b}.rrssb-buttons li.rrssb-delicious a{background-color:#0b79e5}.rrssb-buttons li.rrssb-delicious a:hover{background-color:#095fb4}.rrssb-buttons li.rrssb-vk a{background-color:#4d71a9}.rrssb-buttons li.rrssb-vk a:hover{background-color:#3d5a86}.rrssb-buttons li.rrssb-hackernews a{background-color:#f60}.rrssb-buttons li.rrssb-hackernews a:hover{background-color:#cc5200}.rrssb-buttons li.rrssb-whatsapp a{background-color:#43d854}.rrssb-buttons li.rrssb-whatsapp a:hover{background-color:#28c039}.rrssb-buttons li.rrssb-print a{background-color:#8d98a2}.rrssb-buttons li.rrssb-print a:hover{background-color:#717f8b}.rrssb-buttons li.rrssb-xing a{background-color:#005A5F}.rrssb-buttons li.rrssb-xing a:hover{background-color:#002a2c}.rrssb-buttons li a{background-color:#ccc;border-radius:2px;box-sizing:border-box;display:block;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;font-weight:700;height:100%;padding:11px 7px 12px 27px;position:relative;text-align:center;text-decoration:none;text-transform:uppercase;-webkit-transition:background-color .2s ease-in-out;transition:background-color .2s ease-in-out;width:100%}.rrssb-buttons li a .rrssb-icon{display:block;left:10px;padding-top:9px;position:absolute;top:0;width:10%}.rrssb-buttons li a .rrssb-icon svg{height:17px;width:17px}.rrssb-buttons li a .rrssb-icon svg circle,.rrssb-buttons li a .rrssb-icon svg path{fill:#fff}.rrssb-buttons li a .rrssb-text{color:#fff}.rrssb-buttons li a:active{box-shadow:inset 1px 3px 15px 0 rgba(22,0,0,.25)}.rrssb-buttons li.small a{padding:0}.rrssb-buttons li.small a .rrssb-icon{left:auto;margin:0 auto;overflow:hidden;position:relative;top:auto;width:100%}.rrssb-buttons li.small a .rrssb-text{visibility:hidden}.rrssb-buttons.large-format,.rrssb-buttons.large-format li{height:auto}.rrssb-buttons.large-format li a{-webkit-backface-visibility:hidden;backface-visibility:hidden;border-radius:.2em;padding:8.5% 0 8.5% 12%}.rrssb-buttons.large-format li a .rrssb-icon{height:100%;left:7%;padding-top:0;width:12%}.rrssb-buttons.large-format li a .rrssb-icon svg{height:100%;position:absolute;top:0;width:100%}.rrssb-buttons.large-format li a .rrssb-text{-webkit-backface-visibility:hidden;backface-visibility:hidden}.rrssb-buttons.small-format{padding-top:5px}.rrssb-buttons.small-format li{height:80%;padding:0 1px}.rrssb-buttons.small-format li a .rrssb-icon{height:100%;padding-top:0}.rrssb-buttons.small-format li a .rrssb-icon svg{height:48%;position:relative;top:6px;width:80%}.rrssb-buttons.tiny-format{height:22px;position:relative}.rrssb-buttons.tiny-format li{padding-right:7px}.rrssb-buttons.tiny-format li a{background-color:transparent;padding:0}.rrssb-buttons.tiny-format li a .rrssb-icon{height:100%}.rrssb-buttons.tiny-format li a .rrssb-icon svg{height:70%;width:100%}.rrssb-buttons.tiny-format li a:active,.rrssb-buttons.tiny-format li a:hover{background-color:transparent}.rrssb-buttons.tiny-format li.rrssb-email a .rrssb-icon svg path{fill:#0a88ff}.rrssb-buttons.tiny-format li.rrssb-email a .rrssb-icon:hover .rrssb-icon svg path{fill:#0054a3}.rrssb-buttons.tiny-format li.rrssb-facebook a .rrssb-icon svg path{fill:#306199}.rrssb-buttons.tiny-format li.rrssb-facebook a .rrssb-icon:hover .rrssb-icon svg path{fill:#18304b}.rrssb-buttons.tiny-format li.rrssb-tumblr a .rrssb-icon svg path{fill:#32506d}.rrssb-buttons.tiny-format li.rrssb-tumblr a .rrssb-icon:hover .rrssb-icon svg path{fill:#121d27}.rrssb-buttons.tiny-format li.rrssb-linkedin a .rrssb-icon svg path{fill:#007bb6}.rrssb-buttons.tiny-format li.rrssb-linkedin a .rrssb-icon:hover .rrssb-icon svg path{fill:#003650}.rrssb-buttons.tiny-format li.rrssb-twitter a .rrssb-icon svg path{fill:#26c4f1}.rrssb-buttons.tiny-format li.rrssb-twitter a .rrssb-icon:hover .rrssb-icon svg path{fill:#0b84a6}.rrssb-buttons.tiny-format li.rrssb-googleplus a .rrssb-icon svg path{fill:#e93f2e}.rrssb-buttons.tiny-format li.rrssb-googleplus a .rrssb-icon:hover .rrssb-icon svg path{fill:#a01e11}.rrssb-buttons.tiny-format li.rrssb-youtube a .rrssb-icon svg path{fill:#df1c31}.rrssb-buttons.tiny-format li.rrssb-youtube a .rrssb-icon:hover .rrssb-icon svg path{fill:#84111d}.rrssb-buttons.tiny-format li.rrssb-reddit a .rrssb-icon svg path{fill:#8bbbe3}.rrssb-buttons.tiny-format li.rrssb-reddit a .rrssb-icon:hover .rrssb-icon svg path{fill:#398bcf}.rrssb-buttons.tiny-format li.rrssb-pinterest a .rrssb-icon svg path{fill:#b81621}.rrssb-buttons.tiny-format li.rrssb-pinterest a .rrssb-icon:hover .rrssb-icon svg path{fill:#5d0b11}.rrssb-buttons.tiny-format li.rrssb-pocket a .rrssb-icon svg path{fill:#ed4054}.rrssb-buttons.tiny-format li.rrssb-pocket a .rrssb-icon:hover .rrssb-icon svg path{fill:#b61124}.rrssb-buttons.tiny-format li.rrssb-github a .rrssb-icon svg path{fill:#444}.rrssb-buttons.tiny-format li.rrssb-github a .rrssb-icon:hover .rrssb-icon svg path{fill:#111}.rrssb-buttons.tiny-format li.rrssb-instagram a .rrssb-icon svg path{fill:#125688}.rrssb-buttons.tiny-format li.rrssb-instagram a .rrssb-icon:hover .rrssb-icon svg path{fill:#061d2e}.rrssb-buttons.tiny-format li.rrssb-delicious a .rrssb-icon svg path{fill:#0b79e5}.rrssb-buttons.tiny-format li.rrssb-delicious a .rrssb-icon:hover .rrssb-icon svg path{fill:#064684}.rrssb-buttons.tiny-format li.rrssb-vk a .rrssb-icon svg path{fill:#4d71a9}.rrssb-buttons.tiny-format li.rrssb-vk a .rrssb-icon:hover .rrssb-icon svg path{fill:#2d4263}.rrssb-buttons.tiny-format li.rrssb-hackernews a .rrssb-icon svg path{fill:#f60}.rrssb-buttons.tiny-format li.rrssb-hackernews a .rrssb-icon:hover .rrssb-icon svg path{fill:#993d00}.rrssb-buttons.tiny-format li.rrssb-whatsapp a .rrssb-icon svg path{fill:#43d854}.rrssb-buttons.tiny-format li.rrssb-whatsapp a .rrssb-icon:hover .rrssb-icon svg path{fill:#1f962d}.rrssb-buttons.tiny-format li.rrssb-print a .rrssb-icon svg path{fill:#8d98a2}.rrssb-buttons.tiny-format li.rrssb-print a .rrssb-icon:hover .rrssb-icon svg path{fill:#5a656f}.rrssb-buttons.tiny-format li.rrssb-xing a .rrssb-icon svg path{fill:#005A5F}.rrssb-buttons.tiny-format li.rrssb-xing a .rrssb-icon:hover .rrssb-icon svg path{fill:#000}
+
+.supporting {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 560px) {
+  .supporting {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3rem;
+  }
+}
+
+/* Service Section */
+
+.service {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 5rem;
+  height: 8rem;
+  margin: 3rem;
+  text-align: center;
+}
+
+.service img {
+  width: 5rem;
+  margin-bottom: 1rem;
+}
+
+.service img.paper-icon {
+  width: 3.5rem;
+}
+
+@media only screen and (max-width: 560px) {
+  .service {
+    height: auto;
+    margin: .77rem;
+    font-size: .77rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .main-banner {
+    height: 15rem;
+  }
+
+  .headline {
+    width: 100%;
+    padding: 1rem 2rem;
+    top: 10rem;
+  }
+
+  .headline h4 {
+    font-size: .77rem;
+  }
+
+  .headline h1 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logos {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    all: unset;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+nav a {
+  opacity: 1;
+  position: relative;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background: black;
+  position: absolute;
+  top: -0.75em;
+  left: 0;
+  right: 0;
+  transform: scale(0, 1);
+  transform-origin: right;
+  transition: transform ease-in-out 250ms
+}
+
+nav a:hover::before {
+  transform: scale(1,1);
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  margin-left: 3em;
+  margin-bottom: 0;
+
+}
+
+
+}
+
+@media only screen and (max-width: 700px) {
+  .teaser, .date {
+    display: none;
+  }
+
+  .footinpages {
+    display: flex;
+    flex-direction: column;
+  }
+}
